@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Aditi ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif;scroll-behavior:smooth}
+body{background:#0f0f17;color:#fff;overflow-x:hidden}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background-size:cover;background-position:center;animation:slideshow 24s infinite}
+@keyframes slideshow{
+0%{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url('photo1.jpg') center/cover}
+20%{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url('photo2.jpg') center/cover}
+40%{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url('photo3.jpg') center/cover}
+60%{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url('photo4.jpg') center/cover}
+80%{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url('photo5.jpg') center/cover}
+100%{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url('photo6.jpg') center/cover}
+}
+.hero h1{font-size:4rem;color:#ff6f9c;text-shadow:0 0 20px #ff6f9c}
+.hero h2{margin:20px 0}
+.btn{margin-top:30px;padding:16px 40px;border-radius:50px;background:#ff6f9c;color:white;text-decoration:none}
+.section{padding:80px 10%;text-align:center}
+.letter,.card{background:#1a1a25;border-radius:20px;padding:30px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.gallery img{width:100%;height:350px;object-fit:cover;border-radius:20px;cursor:pointer;transition:.5s}
+.gallery img:hover{transform:scale(1.08) rotate(2deg);box-shadow:0 0 25px rgba(255,111,156,.8)}
+.reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.final{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#ff4d88,#ff8cb4)}
+.heart,.kiss{position:fixed;bottom:-40px;pointer-events:none}
+.heart{font-size:24px;animation:float 6s linear infinite}
+.kiss{font-size:35px;animation:kissFloat 8s linear infinite}
+@keyframes float{to{transform:translateY(-110vh);opacity:0}}
+@keyframes kissFloat{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+.photo-popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);justify-content:center;align-items:center;z-index:9999}
+.photo-popup img{max-width:90%;max-height:90%;border-radius:20px}
+</style>
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+<source src="Khat Navjot Ahuja 320 Kbps.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+<h1>💔 SORRY FOR MY HURTFUL WORDS 💔</h1>
+<h2>Happy 8 Months My Darling Aditi ❤️</h2>
+<p>No excuse. No justification. Just a sincere apology from the person who loves you more than words can explain.</p>
+<a href="#letter" class="btn" onclick="playMusic()">Please Read My Heart ❤️</a>
+</section>
+
+<section id="letter" class="section">
+<h2>My Letter To You 💌</h2>
+<div class="letter">
+<p>
+Sorry meri pyaari Aditi,<br><br>
+Hum tumko bohot hurt kiya hai. I have said words that I didn't mean to but I still said them.
+I am sorry for questioning whether you were ignoring me and for using Snapchat in a way that hurt you.
+I know my words caused pain and I regret every moment of it.<br><br>
+I promise I will become better, trust more, listen more and love you better.
+Today, on our 8 month anniversary, instead of giving you something special, I ended up hurting you.
+For that too, I am truly sorry.<br><br>
+Happy 8 Months Darling ❤️<br><br>
+Forever Yours,<br>
+Keshav ❤️
+</p>
+</div>
+</section>
+
+<section class="section">
+<h2>Our Beautiful Memories 📸</h2>
+<div class="gallery">
+<img src="photo1.jpg"><img src="photo2.jpg"><img src="photo3.jpg">
+<img src="photo4.jpg"><img src="photo5.jpg"><img src="photo6.jpg">
+</div>
+</section>
+
+<section class="section">
+<h2>Reasons I Love You ❤️</h2>
+<div class="reasons">
+<div class="card">Your Smile 😊</div>
+<div class="card">Your Kind Heart ❤️</div>
+<div class="card">The Way You Look At Me ✨</div>
+<div class="card">How Safe I Feel With You 🤍</div>
+<div class="card">Every Memory We Create 🌸</div>
+<div class="card">Simply Because You're You ❤️</div>
+</div>
+</section>
+
+<section class="final">
+<h1>❤️ I LOVE YOU ADITI ❤️</h1>
+<p>Happy 8 Months My Darling ❤️<br><br>— Keshav ❤️</p>
+</section>
+
+<div class="photo-popup" id="photoPopup"><img id="popupImage"></div>
+
+<script>
+function playMusic(){document.getElementById("bgMusic").play();}
+function createHeart(){
+let h=document.createElement("div");
+h.className="heart";h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+}
+function createKiss(){
+let k=document.createElement("div");
+k.className="kiss";k.innerHTML="💋";
+k.style.left=Math.random()*100+"vw";
+document.body.appendChild(k);
+setTimeout(()=>k.remove(),8000);
+}
+setInterval(createHeart,250);
+setInterval(createKiss,1500);
+
+const popup=document.getElementById("photoPopup");
+const popupImg=document.getElementById("popupImage");
+document.querySelectorAll(".gallery img").forEach(img=>{
+img.onclick=()=>{popup.style.display="flex";popupImg.src=img.src;}
+});
+popup.onclick=()=>popup.style.display="none";
+</script>
+</body>
+</html>
